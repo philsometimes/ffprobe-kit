@@ -30,8 +30,8 @@ var output = JSON.parse(ffprobe.stdout);
 console.log(JSON.stringify(output, null, 4));
 ```
 
-In every level of this kit, you'll see the above three lines of code at the bottom
+In every level of this kit, you'll see the above three lines of code at the bottom...
 
 ## Before you begin...
 
-In order to run the script for any level, including 1, you'll need to install dependencies. These are just code packages written by other people that you can borrow, which is handy because you don't want to have write everything from scratch all the time. Node handles dependencies through npm, it's package manager. You don't need to know anything about how npm works for this kit, but npm is a useful term for googling for coding. (We'll teach you a few of those terms as we go.) For now, we're going to use a package called 'child_process'. To install it, open a terminal window and navigate to the directory where you saved this kit. 
+In order to run the script for any level, including 1, you'll need to install dependencies. These are just code packages written by other people that you can borrow, which is handy because you don't want to have write everything from scratch all the time. Node handles dependencies through npm, it's package manager. You don't need to know anything about how npm works for this kit, but npm is a useful term for googling for coding. (We'll teach you a few of those terms as we go.) For now, we're going to use a package called 'child_process'. To install it, open a terminal window and navigate to the directory where you saved this kit.

@@ -1,3 +1,4 @@
+//you nailed level 1 - yay! But 
 
 var pathToVideo = process.argv[2];
 
