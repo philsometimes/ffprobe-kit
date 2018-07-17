@@ -2,7 +2,7 @@
 
 const cp = require('child_process');
 
-var pathToVideo = //TODO Find a video file on your computer and put it here as the value of this variable -- Hint: in js paths are stored as strings. If you don't know what this means, this is your first google assignment :)
+var pathToVideo = //TODO: Find a video file on your computer and put the path to it here as the value of this variable -- Hint: in js paths are stored as strings. If you don't know what this means, this is your first google assignment :)
 
 var ffprobe = cp.spawnSync("ffprobe", ['-v', 'quiet', '-print_format', 'json', '-show_format', '-show_streams', pathToVideo], { encoding : 'utf8' });
 var output = JSON.parse(ffprobe.stdout);
