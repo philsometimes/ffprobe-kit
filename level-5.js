@@ -1,17 +1,21 @@
-//Skip to 4-b if you want to move more quickly
+//Alright, let's finish this! We'll use something called a regular expression to search not just for a file with a particular name but for all video files in a directory. Again, we'll split this logic into two steps; feel free to skip ahead to 5-b if you're ready.
 
 
-//level 5-a (for loop)
+//level 5-a (regex test)
+const cp = require('child_process');
 const fs = require('fs');
 
-var dirPath = process.argv[2]; //directory contains your video plus some docs, etc.
+var dirPath = process.argv[2]; //this time use a directory that contains more than one video
 var files = fs.readdirSync(dirPath)
 
-files.forEach(
-  console.log();
-)
+var re = // TODO: insert a regular expression here for the file extension of your videos (.mov, .mp4, etc.) that isn't case sensitive -- Hint: look up regular expressions on MDN
+
 for (var i = 0; i < files.length; i++) {
-  console.log('file ' + i ' is: ' + files[i]);
+
+  if (true) { //replace the true in these parentheses with a method that tests whether the file has the extension you defined in your re variable.
+    console.log(`${files[i]} is a video`);
+  }
+
 }
 
 
@@ -19,21 +23,22 @@ for (var i = 0; i < files.length; i++) {
 
 
 
-//level 5-b
+//level 5-b (the final script)
+const cp = require('child_process');
 const fs = require('fs');
 
-var dirPath = process.argv[2]; //directory must contain only one video but also some other stuff
+var dirPath = process.argv[2]; //this time use a directory that contains more than one video
 var files = fs.readdirSync(dirPath)
-console.log(files);
+
+var re = // TODO: if you didn't already in 5-a, insert a regular expression here for the file extension of your videos (.mov, .mp4, etc.) that isn't case sensitive
 
 for (var i = 0; i < files.length; i++) {
 
-  if (files[i] == 'name of your video here'){
-  var pathToVideo = dirPath + '/' + files[0];
+  if (true) { //replace the true in these parentheses with a method that tests whether the file has the extension you defined in your re variable.
+    console.log(`${files[i]} is a video
+      here is its ffprobe data: `);
 
-  var ffprobe = cp.spawnSync("ffprobe", ['-v', 'quiet', '-print_format', 'json', '-show_format', '-show_streams', pathToVideo], { encoding : 'utf8' });
-  var output = JSON.parse(ffprobe.stdout);
-}
+    // TODO: By now you've got this ffprobe call down -- Insert the necessary code here to run the probe anytime your if statement finds a video -- Hint: you can find these lines in your code from prior levels if you get stuck.
+  }
 
-  console.log(JSON.stringify(output, null, 4));
 }
