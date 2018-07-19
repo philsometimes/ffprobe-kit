@@ -4,13 +4,13 @@
 
 
 //level 4-a (loop)
-const cp = require('child_process');
-const fs = require('fs');
+var cp = require('child_process');
+var fs = require('fs');
 
 var dirPath = process.argv[2]; //this time make sure your directory contains your video and some other files
 var files = fs.readdirSync(dirPath)
 
-//TODO: Insert a for loop here that loops through the files arrary and logs the following each time through the loop:
+//TODO: Insert a for loop here that loops through the files array and logs the following each time through the loop:
   console.log(`file ${i} is: ${files[i]}`);
 
 
@@ -19,8 +19,8 @@ var files = fs.readdirSync(dirPath)
 
 
 //level 4-b (loop + conditional statement)
-const cp = require('child_process');
-const fs = require('fs');
+var cp = require('child_process');
+var fs = require('fs');
 
 var dirPath = process.argv[2]; //again make sure you're using a directory that contains your video along with some other files
 var files = fs.readdirSync(dirPath)
@@ -31,6 +31,6 @@ console.log(files);
       var pathToVideo = `${dirPath}/${files[i]}`;
 
       var ffprobe = cp.spawnSync("ffprobe", ['-v', 'quiet', '-print_format', 'json', '-show_format', '-show_streams', pathToVideo], { encoding : 'utf8' });
-      
+
       var output = JSON.parse(ffprobe.stdout);
       console.log(JSON.stringify(output, null, 4));

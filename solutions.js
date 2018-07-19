@@ -2,7 +2,7 @@
 
 <level 1>
 
-    const cp = require('child_process');
+    var cp = require('child_process');
 
     var pathToVideo = '/users/desktop/myVideo.mov' //your video path here
 
@@ -16,8 +16,9 @@
 
 <level 2>
 
-    const cp = require('child_process');
+    var cp = require('child_process');
 
+    console.log(process.argv);
     var pathToVideo = process.argv[2];
 
     var ffprobe = cp.spawnSync("ffprobe", ['-v', 'quiet', '-print_format', 'json', '-show_format', '-show_streams', pathToVideo], { encoding : 'utf8' });
@@ -30,8 +31,8 @@
 
 <level 3>
 
-    const fs = require('fs');
-    const cp = require('child_process');
+    var fs = require('fs');
+    var cp = require('child_process');
 
     var dirPath = process.argv[2];
     var files = fs.readdirSync(dirPath)
@@ -47,8 +48,8 @@
 
 <level 4-a>
 
-    const fs = require('fs');
-    const cp = require('child_process');
+    var fs = require('fs');
+    var cp = require('child_process');
 
     var dirPath = process.argv[2];
     var files = fs.readdirSync(dirPath)
@@ -62,8 +63,8 @@
 
 <level 4-b>
 
-    const fs = require('fs');
-    const cp = require('child_process');
+    var fs = require('fs');
+    var cp = require('child_process');
 
     var dirPath = process.argv[2];
     var files = fs.readdirSync(dirPath)
@@ -89,8 +90,8 @@
 
 <level 5-a>
 
-   const cp = require('child_process');
-   const fs = require('fs');
+   var cp = require('child_process');
+   var fs = require('fs');
 
    var dirPath = process.argv[2];
    var files = fs.readdirSync(dirPath)
@@ -109,8 +110,8 @@
 
 <level 5-b>
 
-    const cp = require('child_process');
-    const fs = require('fs');
+    var cp = require('child_process');
+    var fs = require('fs');
 
     var dirPath = process.argv[2]; //this time use a directory that contains more than one video
     var files = fs.readdirSync(dirPath)
