@@ -34,4 +34,10 @@ In every level of this kit, you'll see the above three lines of code at the bott
 
 ## Before you begin...
 
-In order to run the script for any level, including 1, you'll need to install dependencies. These are just code packages written by other people that you can borrow, which is handy because you don't want to have write everything from scratch all the time. Node handles dependencies through npm, it's package manager. You don't need to know anything about how npm works for this kit, but npm is a useful term for googling for coding. (We'll teach you a few of those terms as we go.) For now, we're going to use a package called 'child_process'. To install it, open a terminal window and navigate to the directory where you saved this kit.
+In order to run the script for any level, including 1, you'll need to install dependencies. These are just code packages written by other people that you can borrow, which is handy because you don't want to have write everything from scratch all the time.
+
+Node handles dependencies through npm (short for Node Package Manager). You don't need to know anything about how npm works for this kit, but npm is a useful term for googling for coding. (We'll teach you a few of those terms as we go.)
+
+For now, we're going to use a package called 'child_process'. To install it, open a terminal window and navigate to the directory where you saved this kit. Type `npm install -s child_process`, then hit enter. You'll see a quick progress bar and then the name of the package ('child_process') will pop up, followed by the version number that was installed.
+
+  - The `-s` flag tells npm to add the package you're installing to your project's package.json file. Package.json maintains a sort of wishlist of dependencies for the project, so that if you're setting this up on another computer in the future all you have to do is type `npm install` into Terminal and npm will automatically load up all the dependencies it sees in package.json .
